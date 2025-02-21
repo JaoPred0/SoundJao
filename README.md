@@ -40,7 +40,7 @@ pip install -r requirements.txt
 3. Execute o script no terminal com:
 
    ```sh
-   python script.py
+   python run.py
    ```
 
 ### Termux (Android)
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 5. Execute o script:
 
    ```sh
-   python script.py
+   python run.py
    ```
 
 ### Linux (Ubuntu/Debian)
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 3. Execute o script:
 
    ```sh
-   python3 script.py
+   python3 run.py
    ```
 
 ### MacOS
@@ -113,7 +113,7 @@ pip install -r requirements.txt
 4. Execute o script:
 
    ```sh
-   python3 script.py
+   python3 run.py
    ```
 
 ## Funcionalidades
