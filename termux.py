@@ -13,7 +13,7 @@ import pyfiglet
 init(autoreset=True)
 
 # Versão do script
-VERSAO = "v2.6"
+VERSAO = "v3.1"
 SCDL_PATH = "scdl"
 
 def limpar_terminal():

@@ -6,7 +6,7 @@ SoundJao permite baixar músicas e playlists diretamente do SoundCloud, adiciona
 
 ---
 
-## 🚀 Novidades da Versão 3.0
+## 🚀 Novidades da Versão 3.1
 
 - **Melhoria na velocidade** para Windows, macOS e Linux com um executável otimizado.
 - **Maior qualidade de download** para Termux, melhorando a extração de áudio diretamente pelo terminal do celular.
