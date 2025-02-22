@@ -4,7 +4,17 @@ SoundJao permite baixar músicas e playlists diretamente do SoundCloud, adiciona
 
 ## Criado por JaoPred0
 
-## Baixando o Repositório
+---
+
+## 🚀 Novidades da Versão 3.0
+
+- **Melhoria na velocidade** para Windows, macOS e Linux com um executável otimizado.
+- **Maior qualidade de download** para Termux, melhorando a extração de áudio diretamente pelo terminal do celular.
+- **Execução simplificada**: No PC, basta rodar `main.py` e, no Termux, `termux.py`.
+
+---
+
+## 📥 Baixando o Repositório
 
 Clone o repositório do GitHub executando:
 
@@ -18,114 +28,71 @@ Entre na pasta do projeto:
 cd SoundJao
 ```
 
-## Requisitos
+---
 
-Antes de começar, instale os pacotes necessários executando:
+## 📦 Instalação e Uso
 
-```sh
-pip install -r requirements.txt
-```
+### 🖥️ Windows, macOS e Linux
 
-## Instalação e Uso
-
-### Windows
-
-1. Certifique-se de que o Python está instalado.
-2. Instale os pacotes necessários com:
-
+1. Certifique-se de ter o Python instalado.
+2. Instale as dependências necessárias:
    ```sh
    pip install -r requirements.txt
    ```
-
-3. Execute o script no terminal com:
-
+3. Execute o script:
    ```sh
-   python run.py
+   python main.py
    ```
 
-### Termux (Android)
+📌 **Nota**: Em sistemas Linux e macOS, pode ser necessário usar `python3` ao invés de `python`.
+
+### 📱 Termux (Android)
 
 1. Instale o Termux na Play Store.
 2. Atualize os pacotes:
-
    ```sh
    pkg update && pkg upgrade
    ```
-
-3. Instale Python:
-
+3. Instale Git e Python:
    ```sh
-   pkg install python
+   pkg install git python
    ```
-
-4. Instale os pacotes necessários:
-
+4. Clone o repositório e entre na pasta:
    ```sh
-   pip install -r requirements.txt
+   git clone https://github.com/JaoPred0/SoundJao.git && cd SoundJao
    ```
-
-5. Execute o script:
-
-   ```sh
-   python run.py
-   ```
-
-### Linux (Ubuntu/Debian)
-
-1. Instale Python e pip:
-
-   ```sh
-   sudo apt update && sudo apt install python3 python3-pip
-   ```
-
-2. Instale os pacotes necessários:
-
+5. Instale as dependências:
    ```sh
    pip install -r requirements.txt
    ```
-
-3. Execute o script:
-
+6. Execute o script:
    ```sh
-   python3 run.py
+   python termux.py
    ```
 
-### MacOS
+---
 
-1. Instale o Homebrew (se não tiver):
+## 🔥 Funcionalidades
 
-   ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
+✅ Baixa músicas e playlists do SoundCloud com alta qualidade.
 
-2. Instale Python:
+✅ Adiciona automaticamente metadados como título, artista e capa ao MP3.
 
-   ```sh
-   brew install python
-   ```
+✅ Executável para Windows, macOS e Linux que melhora a velocidade do processo.
 
-3. Instale os pacotes necessários:
+✅ Versão otimizada para Termux, melhorando a qualidade do download pelo celular.
 
-   ```sh
-   pip install -r requirements.txt
-   ```
+✅ Interface interativa no terminal com opções de escolha.
 
-4. Execute o script:
+---
 
-   ```sh
-   python3 run.py
-   ```
+## 🔄 Versão
 
-## Funcionalidades
+Atualmente, a versão estável do script é **Versão 3.0**.
 
-- Baixa músicas e playlists do SoundCloud.
-- Adiciona automaticamente metadados como título, artista e capa ao MP3.
-- Interface interativa no terminal com opções de escolha.
+---
 
-## Versão
+## 🤝 Contribuição
 
-Atualmente, a versão estável do script é **v2.6**.
+Caso queira contribuir com melhorias, sinta-se à vontade para enviar um **Pull Request** ou relatar problemas na aba de **Issues**!
 
-## Contribuição
-
-Caso queira contribuir com melhorias, sinta-se à vontade para enviar um Pull Request ou relatar problemas!
