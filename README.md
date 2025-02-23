@@ -48,28 +48,11 @@ cd SoundJao
 
 ### 📱 Termux (Android)
 
-1. Instale o Termux na Play Store.
-2. Atualize os pacotes:
+1. Instale o Termux no FDroid.
+2. Rode em uma só linha:
    ```sh
-   pkg update && pkg upgrade
+   pkg update && pkg upgrade && pkg install git python && git clone https://github.com/JaoPred0/SoundJao.git && cd SoundJao && pip install -r requirements.txt && chmod +x ~/SoundJao/atualizar.sh && chmod +x ~/verifica_atualizacao.sh && python termux.py
    ```
-3. Instale Git e Python:
-   ```sh
-   pkg install git python
-   ```
-4. Clone o repositório e entre na pasta:
-   ```sh
-   git clone https://github.com/JaoPred0/SoundJao.git && cd SoundJao
-   ```
-5. Instale as dependências:
-   ```sh
-   pip install -r requirements.txt
-   ```
-6. Execute o script:
-   ```sh
-   python termux.py
-   ```
-
 ---
 
 ## 🔥 Funcionalidades
