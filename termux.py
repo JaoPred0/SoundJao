@@ -7,7 +7,6 @@ from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC, TIT2, TPE1, TALB
 from colorama import Fore, init
 import pyfiglet
-import shutil
 
 # Inicializa colorama
 init(autoreset=True)
@@ -24,12 +23,12 @@ def limpar_terminal():
 def exibir_banner():
     """Exibe um banner estilizado."""
     print(Fore.CYAN + pyfiglet.figlet_format("SoundJao"))
-    print(Fore.YELLOW + f" 🎵 Versão: {VERSAO}")
-    print(Fore.GREEN + "📥 Baixe músicas e playlists do SoundCloud!\n")
+    print(Fore.YELLOW + f"Versão: {VERSAO}")
+    print(Fore.GREEN + "Baixe músicas e playlists do SoundCloud!\n")
 
 # Exibe a VPN obrigatória
 def aviso_vpn():
-    print(Fore.RED + "⚠️  IMPORTANTE: USE UMA VPN DOS EUA PARA EVITAR ERROS NO DOWNLOAD ⚠️\n")
+    print(Fore.RED + "IMPORTANTE: USE UMA VPN DOS EUA PARA EVITAR ERROS NO DOWNLOAD ⚠️\n")
     time.sleep(2)
 
 # Limpa o terminal antes de exibir o banner
@@ -73,9 +72,9 @@ def adicionar_metadata(mp3_path, title, artist, album, cover_url):
         })
         if cover_url and cover_url.startswith("http"):
             audio.tags["APIC"] = APIC(encoding=3, mime="image/jpeg", type=3, desc="Cover", data=requests.get(cover_url).content)
-            print(Fore.GREEN + "✅ Capa adicionada!")
+            print(Fore.GREEN + "Capa adicionada!")
         audio.save()
-        print(Fore.GREEN + f"✅ Metadados adicionados a {mp3_path}")
+        print(Fore.GREEN + f"Metadados adicionados a {mp3_path}")
     except Exception as e:
         print(Fore.RED + f"❌ Erro ao adicionar metadados: {e}")
 
@@ -84,23 +83,14 @@ def processar_download(url, tipo):
     limpar_terminal()
     exibir_banner()
     aviso_vpn()
-    print(Fore.YELLOW + f"🔽 Baixando {tipo}...")
+    print(Fore.YELLOW + f"Baixando {tipo}...")
     baixar_playlist(url)
     title, cover_url = obter_info_musica(url)
     print(Fore.CYAN + f"🎵 Título: {title}\n📷 Capa: {cover_url}")
     for mp3_file in [f for f in os.listdir(DOWNLOAD_FOLDER) if f.endswith(".mp3")]:
         adicionar_metadata(os.path.join(DOWNLOAD_FOLDER, mp3_file), os.path.splitext(mp3_file)[0], "SoundCloud", "Playlist", cover_url)
-    print(Fore.GREEN + "✅ Download concluído!")
+    print(Fore.GREEN + "Download concluído!")
     bipar()
-
-import os
-import subprocess
-
-def atualizar_script():
-    """Executa o script Bash para atualizar o projeto."""
-    print("🔄 Iniciando atualização...")
-    subprocess.run(["bash", "atualizar.sh"])  # Chama o script Bash
-
 
 # Execução do menu
 while True:
@@ -108,9 +98,11 @@ while True:
     if escolha in ["1", "2"]:
         processar_download(input(Fore.CYAN + "Digite a URL: "), "música" if escolha == "1" else "playlist")
     elif escolha == "3":
-        atualizar_script()
+        print("\n Iniciando atualização...")
+        os.system("bash ~/SoundJao/atualizar.sh")
+        break  # Sai do loop após iniciar a atualização
     elif escolha == "99":
-        print(Fore.RED + "👋 Saindo...")
+        print(Fore.RED + "Saindo...")
         break
     else:
-        print(Fore.RED + "❌ Opção inválida.")
+        print(Fore.RED + "Opção inválida.")
