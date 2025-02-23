@@ -14,7 +14,6 @@ init(autoreset=True)
 # Versão do script
 VERSAO = "v3.3"
 SCDL_PATH = "scdl"
-SCRIPT_URL = "https://raw.githubusercontent.com/seuusuario/SoundJao/main/soundjao.py"  # Substituir pelo link correto
 
 def limpar_terminal():
     """Limpa o terminal."""

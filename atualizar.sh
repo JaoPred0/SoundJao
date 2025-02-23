@@ -43,7 +43,7 @@ if [ -d "\$PASTA_PROJETO" ]; then
     cd "\$PASTA_PROJETO" || exit
     echo "\${CYAN}🚀 Iniciando \$SCRIPT_INICIAL...${RESET}"
     sleep 2
-    python3 "\$SCRIPT_INICIAL"
+    python "\$SCRIPT_INICIAL"
 else
     echo "\${RED}❌ Falha ao baixar atualização.${RESET}"
 fi
