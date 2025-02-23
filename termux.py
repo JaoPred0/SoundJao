@@ -93,29 +93,14 @@ def processar_download(url, tipo):
     print(Fore.GREEN + "✅ Download concluído!")
     bipar()
 
-def atualizar_script():
-    """Atualiza o script removendo a pasta e baixando novamente."""
-    limpar_terminal()
-    print(Fore.YELLOW + "🔄 Atualizando SoundJao...")
-    
-    # Remove a pasta do script
-    script_path = os.path.abspath(__file__)
-    script_dir = os.path.dirname(script_path)
-    
-    if os.path.exists(script_dir):
-        shutil.rmtree(script_dir, ignore_errors=True)
-        print(Fore.RED + "🗑️  Pasta antiga removida!")
+import os
+import subprocess
 
-    # Baixa o novo script
-    response = requests.get(SCRIPT_URL)
-    if response.status_code == 200:
-        with open(script_path, "wb") as f:
-            f.write(response.content)
-        print(Fore.GREEN + "✅ Atualização concluída! Reiniciando...")
-        time.sleep(2)
-        os.execv(script_path, ["python3"] + [script_path])  # Reinicia o script
-    else:
-        print(Fore.RED + "❌ Falha ao baixar a nova versão.")
+def atualizar_script():
+    """Executa o script Bash para atualizar o projeto."""
+    print("🔄 Iniciando atualização...")
+    subprocess.run(["bash", "atualizar.sh"])  # Chama o script Bash
+
 
 # Execução do menu
 while True:
