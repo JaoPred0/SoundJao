@@ -2,7 +2,6 @@ import os
 import requests
 import subprocess
 import time
-import winsound
 import re
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC, TIT2, TPE1, TALB
@@ -13,15 +12,15 @@ import pyfiglet
 init(autoreset=True)
 
 # Versão do script
-VERSAO = "v3.1"
+VERSAO = "v3.3"
 SCDL_PATH = "scdl"
 
 def limpar_terminal():
     """Limpa o terminal."""
-    os.system("cls" if os.name == "nt" else "clear")
+    os.system("clear")  # Comando para Linux (Termux)
 
 def exibir_banner():
-    """Exibe um banner estilizado"""
+    """Exibe um banner estilizado"""""""""
     print(Fore.CYAN + pyfiglet.figlet_format("SoundJao"))
     print(Fore.YELLOW + f" 🎵 Versão: {VERSAO}")
     print(Fore.GREEN + "📥 Baixe músicas e playlists do SoundCloud!\n")
@@ -37,10 +36,8 @@ if not DOWNLOAD_FOLDER:
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
 
 def bipar():
-    """Emite três bipes."""
-    for _ in range(3):
-        winsound.Beep(1000, 300)
-        time.sleep(0.3)
+    """Emite um alerta sonoro no Linux."""
+    os.system("echo -e '\a'")  # Funciona no Termux
 
 def baixar_playlist(url):
     """Baixa uma playlist do SoundCloud."""

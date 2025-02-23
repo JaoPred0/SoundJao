@@ -7,7 +7,7 @@ import os
 from downloader import download_music
 
 HISTORICO_ARQUIVO = "historico.json"
-version = "(Versão 3.1)"
+version = "(Versão 3.3)"
 
 
 
