@@ -1,4 +1,0 @@
-requests
-mutagen
-colorama
-pyfiglet
