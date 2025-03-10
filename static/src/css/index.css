@@ -1,0 +1,18 @@
+/* 📌 Bootstrap - Framework CSS responsivo */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css');
+
+/* 🎯 Animate.css - Animações CSS prontas */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* 🚀 AOS (Animate On Scroll) - Animações ao rolar a página */
+@import url('https://unpkg.com/aos@next/dist/aos.css');
+
+/* 🔥 Font Awesome - Ícones personalizáveis */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* 🖋️ Google Fonts (Roboto) - Fonte estilizada */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+
+/* 🎡 Swiper - Biblioteca de carrosséis e sliders */
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
