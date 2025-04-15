@@ -83,7 +83,7 @@ python app.py
 
 ## 📄 Versão
 
-Versão 0.9 (Beta)
+Versão 1.3 (Beta)
 
 ---
 
